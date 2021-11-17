@@ -36,6 +36,9 @@ class Homepage extends StatelessWidget {
             style: TextStyle(
                 fontSize: 30, color: Colors.white, fontWeight: FontWeight.w700),
           ),
+          const SizedBox(
+                height: 40,
+              ),
           const Text(
             '0',
             style: TextStyle(
@@ -43,19 +46,39 @@ class Homepage extends StatelessWidget {
               color: Colors.white,
             ),
           ),
+          const SizedBox(
+                height: 40,
+              ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               TextButton(
                 onPressed: decrement,
+                style: TextButton.styleFrom(
+                    backgroundColor: Colors.white,
+                    fixedSize: const Size(100, 100),
+                    primary: Colors.black,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(24),
+                    )),
                 child: const Text('Saiu',
                     style: TextStyle(
                       color: Colors.black,
                       fontSize: 16,
                     )),
               ),
+              const SizedBox(
+                width: 32,
+              ),
               TextButton(
                   onPressed: increment,
+                  style: TextButton.styleFrom(
+                      backgroundColor: Colors.white,
+                      fixedSize: const Size(100, 100),
+                      primary: Colors.black,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(24),
+                      )),
                   child: const Text('Entrou',
                       style: TextStyle(
                         color: Colors.black,
