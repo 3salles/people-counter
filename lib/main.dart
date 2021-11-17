@@ -10,6 +10,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Homepage(),
     );
   }
@@ -29,16 +30,27 @@ class Homepage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.blue,
-        body: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+      backgroundColor: Colors.blue,
+      body: Container(
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+            stops: [0.1, 0.3, 0.7, 1],
+            colors: [Colors.green, Colors.blue, Colors.orange, Colors.pink]
+          )
+        ),
+        child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
           const Text(
             'Pode entrar!',
             style: TextStyle(
                 fontSize: 30, color: Colors.white, fontWeight: FontWeight.w700),
           ),
           const SizedBox(
-                height: 40,
-              ),
+            height: 40,
+          ),
           const Text(
             '0',
             style: TextStyle(
@@ -47,8 +59,8 @@ class Homepage extends StatelessWidget {
             ),
           ),
           const SizedBox(
-                height: 40,
-              ),
+            height: 40,
+          ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -86,6 +98,9 @@ class Homepage extends StatelessWidget {
                       )))
             ],
           )
-        ]));
+        ],
+      ),
+    
+      ));
   }
 }
