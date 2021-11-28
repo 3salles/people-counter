@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="br.com.tris.people_counter">
    <application
-        android:label="people_counter"
+        android:label="Contador"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"
